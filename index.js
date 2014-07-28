@@ -23,9 +23,9 @@ module.exports = function(opts) {
       totalEquity,
       overallCost;
 
-  if (typeof opts.amortizeTerm === 'undefined') {
-    opts.amortizeTerm = opts.totalTerm;
-  }
+  opts.amortizeTerm = opts.amortizeTerm || opts.totalTerm;
+  opts.downPayment = opts.downPayment || 0;
+  opts.closingCosts = opts.closingCosts || 0;
 
   amortizedVal = amortize({
     amount: opts.amount,
