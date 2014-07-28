@@ -27,8 +27,6 @@ module.exports = function(opts) {
     opts.amortizeTerm = opts.totalTerm;
   }
 
-  console.log(typeof opts.amortizeTerm);
-
   amortizedVal = amortize({
     amount: opts.amount,
     rate: opts.rate,
