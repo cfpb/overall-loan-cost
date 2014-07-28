@@ -1,4 +1,6 @@
-# overall-loan-cost [![Build Status](https://secure.travis-ci.org/cfpb/overall-loan-cost.png?branch=master)](http://travis-ci.org/cfpb/overall-loan-cost)
+# overall-loan-cost 
+
+[![Build Status](https://secure.travis-ci.org/cfpb/overall-loan-cost.png?branch=master)](http://travis-ci.org/cfpb/overall-loan-cost)
 
 > Calculate the overall cost of a loan.
 
@@ -12,11 +14,48 @@ npm install overall-loan-cost --save
 
 ## Usage
 
-[Require](http://browserify.org/) the module and pass it a [`Position` object](https://developer.mozilla.org/en-US/docs/Web/API/Position):
+Require the module and pass it an object of loan values:
 
 ```javascript
-var overall-loan-cost = require('overall-loan-cost');
-overall-loan-cost.awesome(); // "awesome"
+var cost = require('overall-loan-cost');
+cost({
+  amountBorrowed: 300000,
+  rate: 4.25,
+  totalTerm: 360,
+  amortizeTerm: 360,
+  downPayment: 20000,
+  closingCosts: 30000
+});
+```
+
+This will return the total cost of the loan, total equity of the loan, and the overall cost of the loan (cost + equity).
+
+```javascript
+{ 
+  totalCost: 261295.08,
+  totalEquity: 320000,
+  overallCost: 581295.08 
+}
+```
+
+The amortizeTerm, downPayment, and closingCosts values are optional, so:
+
+```javascript
+cost({
+  amountBorrowed: 300000,
+  rate: 4.25,
+  totalTerm: 360,
+});
+```
+
+Will return:
+
+```javascript
+{ 
+  totalCost: 231295.08,
+  totalEquity: 300000,
+  overallCost: 531295.08 
+}
 ```
 
 ## Contributing

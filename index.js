@@ -3,7 +3,7 @@
  * calculate the overall cost of a loan over its life or a given period
  * @param {object}
  * opts = {
- *    amount: num,
+ *    amountBorrowed: num,
  *    rate: num,
  *    totalTerm: num,
  *    amortizeTerm: num,
