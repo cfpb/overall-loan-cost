@@ -1,6 +1,6 @@
 'use strict';
 
-var overallLoanCost = require('../lib/overall-loan-cost.js');
+var cost = require('../index.js');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -27,10 +27,14 @@ exports.overallLoanCost = {
     // setup here
     done();
   },
-  'no args': function(test) {
+  'Amount, rate, and term': function(test) {
     test.expect(1);
     // tests here
-    test.equal(overallLoanCost.awesome(), 'awesome', 'should be awesome.');
+    test.equal(
+      cost({amountBorrowed: 300000, rate: 4.25, totalTerm: 360}).overallCost,
+      531295.08,
+      'should be 531295.08.'
+    );
     test.done();
   }
 };
