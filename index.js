@@ -17,6 +17,15 @@
 
 var amortize = require('amortize');
 
+function roundNumbers(obj) {
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      obj[key] = Math.round(obj[key] * 100) / 100;
+    }
+  }
+  return obj;
+}
+
 module.exports = function(opts) {
   var loanCost = {},
       amortizedVal;
@@ -34,7 +43,9 @@ module.exports = function(opts) {
 
   loanCost.totalCost = Number(opts.closingCosts) + Number(amortizedVal.interest);
   loanCost.totalEquity = Number(opts.downPayment) + Number(amortizedVal.principal);
-  loanCost.overallCost = loanCost.totalCost + loanCost.totalEquity;
+  loanCost.overallCost = (loanCost.totalCost + loanCost.totalEquity).toFixed(2);
+
+  roundNumbers(loanCost);
 
   return loanCost;
 
