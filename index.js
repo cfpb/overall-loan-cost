@@ -43,7 +43,7 @@ module.exports = function(opts) {
 
   loanCost.totalCost = Number(opts.closingCosts) + Number(amortizedVal.interest);
   loanCost.totalEquity = Number(opts.downPayment) + Number(amortizedVal.principal);
-  loanCost.overallCost = (loanCost.totalCost + loanCost.totalEquity).toFixed(2);
+  loanCost.overallCost = loanCost.totalCost + loanCost.totalEquity;
 
   roundNumbers(loanCost);
 
