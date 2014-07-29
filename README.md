@@ -22,7 +22,6 @@ cost({
   amountBorrowed: 300000,
   rate: 4.25,
   totalTerm: 360,
-  amortizeTerm: 360,
   downPayment: 20000,
   closingCosts: 30000
 });
@@ -38,7 +37,7 @@ This will return the total cost of the loan, total equity of the loan, and the o
 }
 ```
 
-The amortizeTerm, downPayment, and closingCosts values are optional, so:
+The downPayment and closingCosts values are optional, so:
 
 ```javascript
 cost({
