@@ -50,7 +50,6 @@
     "browser-test": "./node_modules/.bin/browserify test/browser/reporter.js | ./node_modules/.bin/testling"
   },
   "dependencies": {
-    "amortize": "~0.1.1",
-    "nodeunit": "~0.8.8"
+    "amortize": "^0.2.0"
   }
 }

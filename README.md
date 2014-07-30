@@ -14,10 +14,35 @@ npm install overall-loan-cost --save
 
 ## Usage
 
-Require the module and pass it an object of loan values:
+## Basic usage
+
+Require the module and pass it an object of loan values (amount borrowed, rate, and total loan term in months):
 
 ```javascript
 var cost = require('overall-loan-cost');
+
+cost({
+  amountBorrowed: 300000,
+  rate: 4.25,
+  totalTerm: 360,
+});
+```
+
+This will return the total cost of the loan, total equity of the loan, and the overall cost of the loan (cost + equity):
+
+```javascript
+{ 
+  totalCost: 231295.08,
+  totalEquity: 300000,
+  overallCost: 531295.08 
+}
+```
+
+## Additional values
+
+You can also include the down payment and closing costs of the loan.
+
+```javascript
 cost({
   amountBorrowed: 300000,
   rate: 4.25,
@@ -27,7 +52,7 @@ cost({
 });
 ```
 
-This will return the total cost of the loan, total equity of the loan, and the overall cost of the loan (cost + equity).
+Will return:
 
 ```javascript
 { 
@@ -37,23 +62,26 @@ This will return the total cost of the loan, total equity of the loan, and the o
 }
 ```
 
-The downPayment and closingCosts values are optional, so:
+If you're interested in seeing the costs of a loan for a period that is shorter than the total life of the loan, you can pass the `amortizeTerm` value in months:
 
 ```javascript
 cost({
-  amountBorrowed: 300000,
-  rate: 4.25,
+  amountBorrowed: 255000,
+  rate: 4.5,
   totalTerm: 360,
-});
+  amortizeTerm: 84,
+  downPayment: 45000,
+  closingCosts: 6000
+})
 ```
 
-Will return:
+This will return the total cost, total equity, and overall cost after 7 years:
 
 ```javascript
-{ 
-  totalCost: 231295.08,
-  totalEquity: 300000,
-  overallCost: 531295.08 
+{
+  totalCost: 81449.02,
+  totalEquity: 78082.98,
+  overallCost: 159531.99
 }
 ```
 
