@@ -32,24 +32,27 @@
     "browserify": "~5.9.1",
     "nodeunit-browser-tap": "contolini/nodeunit-browser-tap"
   },
-  "testling": {
-    "files": "test/*.js",
-    "browsers": [
-      "ie/6..latest",
-      "chrome/22..latest",
-      "firefox/16..latest",
-      "safari/latest",
-      "opera/11.0..latest",
-      "iphone/6",
-      "ipad/6",
-      "android-browser/latest"
-    ]
-  },
   "scripts": {
     "test": "nodeunit test/overall-loan-cost-tests.js",
     "browser-test": "./node_modules/.bin/browserify test/browser/reporter.js | ./node_modules/.bin/testling"
   },
   "dependencies": {
     "amortize": "^0.2.0"
+  },
+  "testling": {
+    "scripts": "node_modules/nodeunit-browser-tap/lib/nodeunit.js",
+    "files": "test/browser/reporter.js",
+    "browsers": [
+      "ie/8..latest",
+      "firefox/17..latest",
+      "firefox/nightly",
+      "chrome/22..latest",
+      "chrome/canary",
+      "opera/12..latest",
+      "opera/next",
+      "safari/5.1..latest",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest"
+    ]
   }
 }
