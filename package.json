@@ -28,15 +28,29 @@
   ],
   "devDependencies": {
     "nodeunit": "~0.8.6",
-    "karma-nodeunit": "~0.1.1",
-    "karma-sauce-launcher": "~0.2.10",
-    "karma": "~0.12.19"
+    "testling": "~1.7.0",
+    "browserify": "~5.9.1",
+    "nodeunit-browser-tap": "contolini/nodeunit-browser-tap"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
   },
   "scripts": {
     "test": "nodeunit test/overall-loan-cost-tests.js",
-    "browser-test": "browserify test/browser/runner.js > test-runner.js && karma start karma.conf-ci.js && rm test-runner.js"
+    "browser-test": "./node_modules/.bin/browserify test/browser/reporter.js | ./node_modules/.bin/testling"
   },
   "dependencies": {
-    "amortize": "^0.1.1"
+    "amortize": "~0.1.1",
+    "nodeunit": "~0.8.8"
   }
 }
