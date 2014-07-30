@@ -165,7 +165,7 @@ exports.overallLoanCost = {
     test.done();
   },
   'Various time horizons': function(test) {
-    test.expect(1);
+    test.expect(2);
     test.deepEqual(
       cost({
         amountBorrowed: 255000,
@@ -178,9 +178,25 @@ exports.overallLoanCost = {
       {
         totalCost: 81449.02,
         totalEquity: 78082.98,
-        overallCost: 159532
+        overallCost: 159531.99
       },
       'should return the correct total cost, total equity, and overall cost after 7 years'
+    );
+    test.deepEqual(
+      cost({
+        amountBorrowed: 255000,
+        rate: 4.5,
+        totalTerm: 360,
+        amortizeTerm: 144,
+        downPayment: 45000,
+        closingCosts: 6000
+      }),
+      {
+        totalCost: 128094.40,
+        totalEquity: 108960.44,
+        overallCost: 237054.85
+      },
+      'should return the correct total cost, total equity, and overall cost after 12 years'
     );
     test.done();
   }
