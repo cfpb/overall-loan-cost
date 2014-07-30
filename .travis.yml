@@ -5,6 +5,7 @@ node_js:
 
 install:
   - npm install -g karma-cli browserify
+  - npm install
 
 before_script:
   - browserify test/browser/runner.js > test-runner.js
