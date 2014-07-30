@@ -16,5 +16,5 @@ script:
 
 env:
   global:
-  - secure: PfRFZIJg7CSSUduEfw7W+ISS6rzxeOlPeV8/keF3PkUDj//6Ys+7Xygrc2Xdzoc9idcty94rz+C3dfVAnvGZ3/KrAC5ANQ37DuUUmdaQUjIHqJwOzoEVca3s0E0Z5r8px8R5UwY2Xq/gBbRjwEl+rdqjjgVNX0GO1RwteVLQfXk=
-  - secure: goUJb57mYT9w1EIqxosWbycN1twy8jC+l2KKz9kkkUA5yUbvPuRI87rzrvT5lq7JOPlqaLB1zOlBvOcYFFhgXnEjmIL4guLHuA0siMBel2rXHe9i+Q//adQsVmQFJs4tQ2XdVraZdraarFgMoDMlThH1Weo6R1ytVaasa3HjBz8=
+  - secure: jGfFXLM2FStnfG0l+IbzxOsBeTOQTb+0HeZjz3d0eRc7Daf6XmQjayVAOpyS8nvfY20rYAhkEyutkemb95O0ZC9oEUnT0i12fryZxYXqvI5PSR+o4xCSe9fWIKtVa6z4z8EHObCTaUOgi3jHuaVFTTuHLwYOnHOhVEvFaSAxMhc=
+  - secure: JYjjYUhS7dzfDVVgIf32dWmZ/gPcLLgpEvYHAWHURKLJdWd4NV6frtPUErA52ThwZzJrBUVDmeR1WV07E3aPtL6CIQOgEOvRUFaYT8/2fHmHv+FnFYTFaFDTvcfRApfiBs/eP0W8qIgLC8MmaUTG9KL7Jm8bnDgmGaiEQZ1FI7s=
