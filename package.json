@@ -27,10 +27,14 @@
     "browserify"
   ],
   "devDependencies": {
-    "nodeunit": "~0.8.6"
+    "nodeunit": "~0.8.6",
+    "karma-nodeunit": "~0.1.1",
+    "karma-sauce-launcher": "~0.2.10",
+    "karma": "~0.12.19"
   },
   "scripts": {
-    "test": "nodeunit test/overall-loan-cost-tests.js"
+    "test": "nodeunit test/overall-loan-cost-tests.js",
+    "browser-test": "browserify test/browser/runner.js > test-runner.js && karma start karma.conf-ci.js && rm test-runner.js"
   },
   "dependencies": {
     "amortize": "^0.1.1"
