@@ -14,9 +14,6 @@ script:
   - npm test
   - karma start karma.conf-ci.js
 
-addons:
-  sauce_connect: true
-
 env:
   global:
   - secure: PfRFZIJg7CSSUduEfw7W+ISS6rzxeOlPeV8/keF3PkUDj//6Ys+7Xygrc2Xdzoc9idcty94rz+C3dfVAnvGZ3/KrAC5ANQ37DuUUmdaQUjIHqJwOzoEVca3s0E0Z5r8px8R5UwY2Xq/gBbRjwEl+rdqjjgVNX0GO1RwteVLQfXk=
