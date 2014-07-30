@@ -2,19 +2,3 @@ language: node_js
 
 node_js:
   - '0.10'
-
-install:
-  - npm install -g karma-cli browserify
-  - npm install
-
-before_script:
-  - browserify test/browser/runner.js > test-runner.js
-
-script:
-  - npm test
-  - karma start karma.conf-ci.js
-
-env:
-  global:
-  - secure: jGfFXLM2FStnfG0l+IbzxOsBeTOQTb+0HeZjz3d0eRc7Daf6XmQjayVAOpyS8nvfY20rYAhkEyutkemb95O0ZC9oEUnT0i12fryZxYXqvI5PSR+o4xCSe9fWIKtVa6z4z8EHObCTaUOgi3jHuaVFTTuHLwYOnHOhVEvFaSAxMhc=
-  - secure: JYjjYUhS7dzfDVVgIf32dWmZ/gPcLLgpEvYHAWHURKLJdWd4NV6frtPUErA52ThwZzJrBUVDmeR1WV07E3aPtL6CIQOgEOvRUFaYT8/2fHmHv+FnFYTFaFDTvcfRApfiBs/eP0W8qIgLC8MmaUTG9KL7Jm8bnDgmGaiEQZ1FI7s=
