@@ -1,6 +1,7 @@
 # overall-loan-cost [![Build Status](https://secure.travis-ci.org/cfpb/overall-loan-cost.png?branch=master)](http://travis-ci.org/cfpb/overall-loan-cost)
 
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/conto.svg)](https://saucelabs.com/u/conto)
+[![browser support](https://ci.testling.com/cfpb/overall-loan-cost.png)
+](https://ci.testling.com/cfpb/overall-loan-cost)
 
 > Calculate the overall cost of a loan.
 
