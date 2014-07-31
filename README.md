@@ -1,6 +1,7 @@
-# overall-loan-cost 
+# overall-loan-cost [![Build Status](https://secure.travis-ci.org/cfpb/overall-loan-cost.png?branch=master)](http://travis-ci.org/cfpb/overall-loan-cost)
 
-[![Build Status](https://secure.travis-ci.org/cfpb/overall-loan-cost.png?branch=master)](http://travis-ci.org/cfpb/overall-loan-cost)
+[![browser support](https://ci.testling.com/cfpb/overall-loan-cost.png)
+](https://ci.testling.com/cfpb/overall-loan-cost)
 
 > Calculate the overall cost of a loan.
 
@@ -31,10 +32,10 @@ cost({
 This will return the total cost of the loan, total equity of the loan, and the overall cost of the loan (cost + equity):
 
 ```javascript
-{ 
+{
   totalCost: 231295.08,
   totalEquity: 300000,
-  overallCost: 531295.08 
+  overallCost: 531295.08
 }
 ```
 
@@ -55,10 +56,10 @@ cost({
 Will return:
 
 ```javascript
-{ 
+{
   totalCost: 261295.08,
   totalEquity: 320000,
-  overallCost: 581295.08 
+  overallCost: 581295.08
 }
 ```
 
