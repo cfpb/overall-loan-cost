@@ -1,6 +1,6 @@
 {
   "name": "overall-loan-cost",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "index.js",
   "description": "Calculate the overall cost of a loan.",
   "homepage": "https://github.com/cfpb/overall-loan-cost",
@@ -14,9 +14,6 @@
     "url": "https://github.com/cfpb/overall-loan-cost"
   },
   "license": "Public Domain",
-  "files": [
-    "lib"
-  ],
   "keywords": [
     "overall-loan-cost",
     "money",
