@@ -32,10 +32,10 @@ cost({
 This will return the total cost of the loan, total equity of the loan, and the overall cost of the loan (cost + equity):
 
 ```javascript
-{ 
+{
   totalCost: 231295.08,
   totalEquity: 300000,
-  overallCost: 531295.08 
+  overallCost: 531295.08
 }
 ```
 
@@ -56,10 +56,10 @@ cost({
 Will return:
 
 ```javascript
-{ 
+{
   totalCost: 261295.08,
   totalEquity: 320000,
-  overallCost: 581295.08 
+  overallCost: 581295.08
 }
 ```
 
